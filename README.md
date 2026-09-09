@@ -46,3 +46,9 @@ Notes on choice of SB 2.7.18 (and not 3.x or the latest 4.x):
 - Spring Boot **Latest Version** 4.1 (4.1.1 - as of Sept. 7th 2026) documentation: \
   [docs.spring.io/spring-boot/index.html](https://docs.spring.io/spring-boot/index.html)
 
+
+## Notes
+
+- Understand Spring Data Modules Versions compatibility with a Spring Boot version \
+  [spring-data-modules-versions-notes.md](./spring-data-modules-versions-notes.md)
+

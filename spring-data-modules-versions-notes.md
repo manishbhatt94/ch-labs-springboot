@@ -1,4 +1,4 @@
-# Spring Data + Spring Boot: The Complete Beginner's Reference Guide
+# Understand Spring Data Modules Versions compatibility with a Spring Boot version
 
 ## What This Guide Covers
 
