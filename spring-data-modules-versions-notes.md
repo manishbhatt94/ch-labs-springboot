@@ -299,8 +299,8 @@ beginner-friendly source for this specific question.
 
 Save these. You do not need to repeat the steps above for your current project.
 
-### Spring Data Modules - Reference Documentation (to read and learn from):
 
+### Spring Data Modules - Reference Documentation (to read and learn from):
 
 - Spring Data Commons 2.7.18: \
 https://docs.spring.io/spring-data/commons/docs/2.7.18/reference/html/
@@ -326,7 +326,6 @@ https://docs.spring.io/spring-data/rest/docs/3.7.18/reference/html/
 
 ### Spring Data Modules - API / Javadoc (class-level reference, when you need method signatures):
 
-
 - Spring Data Commons 2.7.18: \
 https://docs.spring.io/spring-data/commons/docs/2.7.18/api/
 
@@ -339,9 +338,52 @@ https://docs.spring.io/spring-data/mongodb/docs/3.4.18/api/
 
 (Same pattern for any other module.)
 
-### Spring Boot Dependency Versions Page for 2.7.18:
+
+### Spring Boot Dependency Versions Page for Spring Boot v2.7.18:
 
 [docs.spring.io/spring-boot/docs/2.7.18/reference/html/dependency-versions.html](https://docs.spring.io/spring-boot/docs/2.7.18/reference/html/dependency-versions.html)
+
+
+### For Spring Boot v2.7.18 - Find Spring Data Release Train
+
+- From the Dependency Versions Page (Managed Dependency Coordinates section) of this Spring Boot version (2.7.18),
+find the version of Spring Data Module `spring-data-commons` (Use Ctrl+F).
+- For Spring Boot v2.7.18, the version of `spring-data-commons` turns out to be `2.7.18`. Note this.
+- Now, open the reference documentation page for the above version of `spring-data-commons` module.
+- As explained above, the page is [docs.spring.io/spring-data/commons/docs/2.7.18/reference/html/](https://docs.spring.io/spring-data/commons/docs/2.7.18/reference/html/)
+- This opens the page for "Spring Data Commons - Reference Documentation" (Spring Data Commons version: 2.7.18).
+- On this page, you'll find a section called **"Dependencies"**.
+- Here the **Spring Data Release Train name** is clearly mentioned, under which this particular Spring Data Commons (v2.7.18)
+module is included; and we know that this Spring Data Commons module is packaged with Spring Boot v2.7.18.
+- So, we come to know the **Spring Data Release Train name** that this Spring Boot version uses.
+- Note what the **"Dependencies"** section on this page says:
+
+> Due to the different inception dates of individual Spring Data modules, most of them carry different major and
+> minor version numbers. The easiest way to find compatible ones is to rely on the Spring Data Release Train BOM
+> that we ship with the compatible versions defined. In a Maven project, you would declare this dependency in
+> the `<dependencyManagement />` section of your POM as follows:
+>
+> *Example 1. Using the Spring Data release train BOM*
+> ```xml
+> <dependencyManagement>
+>   <dependencies>
+>     <dependency>
+>       <groupId>org.springframework.data</groupId>
+>       <artifactId>spring-data-bom</artifactId>
+>       <version>2021.2.18</version>
+>       <scope>import</scope>
+>       <type>pom</type>
+>     </dependency>
+>   </dependencies>
+> </dependencyManagement>
+> ```
+>
+> **The current release train version is `2021.2.18`.**
+> The train version uses calver with the pattern YYYY.MINOR.MICRO.
+>
+> &mdash; [docs.spring.io/spring-data/commons/docs/2.7.18/reference/html/#dependencies](https://docs.spring.io/spring-data/commons/docs/2.7.18/reference/html/#dependencies)
+
+**Therefore we can conclude that Spring Boot v2.7.18 uses Spring Data Release Train `2021.2.18` name.**
 
 
 ### Docs Links for newer versions of Spring Data Modules (Updated Documentation URLs Structure)
