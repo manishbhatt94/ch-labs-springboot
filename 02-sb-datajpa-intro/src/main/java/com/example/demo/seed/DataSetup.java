@@ -21,7 +21,7 @@ public class DataSetup {
 
 	@PostConstruct
 	public void doSetup() {
-//		seedEmployees();
+		seedEmployees();
 	}
 
 	public void seedEmployees() {
