@@ -3,18 +3,23 @@ package com.example.demo.app;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
 
 import com.example.demo.entity.Employee;
 import com.example.demo.repository.EmployeeCrudRepository;
+import com.example.demo.repository.EmployeeJpaRepository;
 
 @Component
 public class MySpringDataJpaDemo {
 
 	private final EmployeeCrudRepository crudRepository;
 
-	public MySpringDataJpaDemo(EmployeeCrudRepository crudRepository) {
+	private final EmployeeJpaRepository jpaRepository;
+
+	public MySpringDataJpaDemo(EmployeeCrudRepository crudRepository, EmployeeJpaRepository jpaRepository) {
 		this.crudRepository = crudRepository;
+		this.jpaRepository = jpaRepository;
 	}
 
 	public void doCrudRepositoryDemo() {
@@ -90,6 +95,21 @@ public class MySpringDataJpaDemo {
 	}
 
 	public void doJpaRepositoryDemo() {
+
+		Sort sortBySalaryAsc = Sort.sort(Employee.class).by(Employee::getEmployeeSalary).ascending();
+		Sort sortBySalaryDesc = Sort.sort(Employee.class).by(Employee::getEmployeeSalary).descending();
+
+		List<Employee> karnatakaHighestPaid = jpaRepository
+				.findFirst3PeopleByEmployeeAddressContainingIgnoreCase("karnataka", sortBySalaryDesc);
+		System.out.println("\nTop 3 highest paid employees in Karnataka: ");
+		karnatakaHighestPaid.stream().forEach(System.out::println);
+
+		List<Employee> maharashtraLowestPaid = jpaRepository
+				.findFirst3PeopleByEmployeeAddressContainingIgnoreCase("maharashtra", sortBySalaryAsc);
+		System.out.println("\nTop 3 lowest paid employees in Maharashtra: ");
+		maharashtraLowestPaid.stream().forEach(System.out::println);
+
+		System.out.println();
 
 	}
 
