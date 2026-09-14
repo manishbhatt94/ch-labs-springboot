@@ -43,6 +43,47 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		 <!-- 
+			JSP support (Jasper engine)
+
+			Spring Boot's embedded Tomcat (tomcat-embed-core) does not include 
+			the JSP compiler/runtime by default. tomcat-embed-jasper provides 
+			Apache Jasper, which compiles .jsp files into servlets at runtime.
+
+			Version is managed by Spring Boot (via tomcat.version property).
+			For Spring Boot 2.7.18 this resolves to 9.0.83 — the same version 
+			as the embedded Tomcat core.
+
+			Do not specify an explicit <version>.
+			
+			Check Spring Boot 2.7.18 docs Managed Dependency Coordinates:
+			https://docs.spring.io/spring-boot/docs/2.7.18/reference/html/dependency-versions.html#appendix.dependency-versions.coordinates
+		-->
+		<dependency>
+		    <groupId>org.apache.tomcat.embed</groupId>
+		    <artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+
+		<!-- 
+			JSTL (JSP Standard Tag Library)
+
+			Provides the standard tag libraries (core, fmt, etc.) used in JSPs.
+			javax.servlet:jstl is the classic implementation for the javax.* 
+			namespace (required for Spring Boot 2.x / Servlet 4.0).
+
+			Version is managed by Spring Boot (jstl.version property) and 
+			resolves to 1.2 for Spring Boot 2.7.18.
+
+			Do not specify an explicit <version>.
+			
+			Check "jstl.version" property & "javax.servlet:jstl" artifact dependency in:
+			https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-dependencies/2.7.18/spring-boot-dependencies-2.7.18.pom
+		-->
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>jstl</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
