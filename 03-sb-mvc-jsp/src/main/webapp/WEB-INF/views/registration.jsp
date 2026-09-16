@@ -27,7 +27,7 @@
 		<h2>Registration Form</h2>
 		<p>Register a <strong>New Employee</strong> in the system:</p>
 
-		<form action="" method="POST">
+		<form action="${pageContext.request.contextPath}/app/registration/save" method="POST">
 			<p class="form-control">
 				<label for="employeeId">Employee ID</label>
 				<input type="number" name="employeeId" id="employeeId" required="required"
@@ -54,6 +54,14 @@
 				<button type="submit">Save</button>
 			</p>
 		</form>
+
+		<br>
+		<c:if test="${not empty saveActionSuccess}">
+			<p class="alert alert-success">${saveActionSuccess}</p>
+		</c:if>
+		<c:if test="${not empty saveActionFailure}">
+			<p class="alert alert-error">${saveActionFailure}</p>
+		</c:if>
 	</section>
 
 </main>
