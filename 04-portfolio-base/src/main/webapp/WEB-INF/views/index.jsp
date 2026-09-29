@@ -38,7 +38,7 @@
 							<h1 class="text-uppercase">I am rahi satner</h1>
 							<h5 class="text-uppercase">senior wordpress developer</h5>
 							<div class="d-flex align-items-center">
-								<a class="primary_btn" href="/client/contact"><span>Hire Me</span></a>
+								<a class="primary_btn" href="${pageContext.request.contextPath}/client/contact"><span>Hire Me</span></a>
 								<a class="primary_btn tr-bg" href="#"><span>Get CV</span></a>
 							</div>
 						</div>
