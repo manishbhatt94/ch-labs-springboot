@@ -8,17 +8,17 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="icon" href="img/favicon.png" type="image/png">
+	<link rel="icon" href="${pageContext.request.contextPath}/img/favicon.png" type="image/png">
 	<title>About Us</title>
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="vendors/linericon/style.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/vendors/linericon/style.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-awesome.min.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/vendors/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/magnific-popup.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/vendors/nice-select/css/nice-select.css">
 	<!-- main css -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 
 <body>
@@ -34,8 +34,8 @@
                 <div class="banner_content text-center">
                     <h2>About Us</h2>
                     <div class="page_link">
-                        <a href="index.html">Home</a>
-                        <a href="about.html">About</a>
+                        <a href="${pageContext.request.contextPath}/client/home">Home</a>
+                        <a href="${pageContext.request.contextPath}/client/about">About</a>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
             <div class="row justify-content-start align-items-center">
                 <div class="col-lg-5">
                     <div class="about_img">
-                        <img class="" src="img/about-us.png" alt="">
+                        <img class="" src="${pageContext.request.contextPath}/img/about-us.png" alt="">
                     </div>
                 </div>
 
@@ -84,63 +84,63 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="single-brand-item d-table">
                                 <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo1.png" alt="">
+                                    <img src="${pageContext.request.contextPath}/img/brands/logo1.png" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="single-brand-item d-table">
                                 <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo2.png" alt="">
+                                    <img src="${pageContext.request.contextPath}/img/brands/logo2.png" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="single-brand-item d-table">
                                 <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo3.png" alt="">
+                                    <img src="${pageContext.request.contextPath}/img/brands/logo3.png" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="single-brand-item d-table">
                                 <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo4.png" alt="">
+                                    <img src="${pageContext.request.contextPath}/img/brands/logo4.png" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="single-brand-item d-table">
                                 <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo5.png" alt="">
+                                    <img src="${pageContext.request.contextPath}/img/brands/logo5.png" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="single-brand-item d-table">
                                 <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo6.png" alt="">
+                                    <img src="${pageContext.request.contextPath}/img/brands/logo6.png" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="single-brand-item d-table">
                                 <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo7.png" alt="">
+                                    <img src="${pageContext.request.contextPath}/img/brands/logo7.png" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="single-brand-item d-table">
                                 <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo8.png" alt="">
+                                    <img src="${pageContext.request.contextPath}/img/brands/logo8.png" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="single-brand-item d-table">
                                 <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo9.png" alt="">
+                                    <img src="${pageContext.request.contextPath}/img/brands/logo9.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -185,7 +185,7 @@
                     <div class="testi_item">
                         <div class="row">
                             <div class="col-lg-4">
-                                <img src="img/testimonials/t1.jpg" alt="">
+                                <img src="${pageContext.request.contextPath}/img/testimonials/t1.jpg" alt="">
                             </div>
                             <div class="col-lg-8">
                                 <div class="testi_text">
@@ -198,7 +198,7 @@
                     <div class="testi_item">
                         <div class="row">
                             <div class="col-lg-4">
-                                <img src="img/testimonials/t2.jpg" alt="">
+                                <img src="${pageContext.request.contextPath}/img/testimonials/t2.jpg" alt="">
                             </div>
                             <div class="col-lg-8">
                                 <div class="testi_text">
@@ -211,7 +211,7 @@
                     <div class="testi_item">
                         <div class="row">
                             <div class="col-lg-4">
-                                <img src="img/testimonials/t1.jpg" alt="">
+                                <img src="${pageContext.request.contextPath}/img/testimonials/t1.jpg" alt="">
                             </div>
                             <div class="col-lg-8">
                                 <div class="testi_text">
@@ -224,7 +224,7 @@
                     <div class="testi_item">
                         <div class="row">
                             <div class="col-lg-4">
-                                <img src="img/testimonials/t2.jpg" alt="">
+                                <img src="${pageContext.request.contextPath}/img/testimonials/t2.jpg" alt="">
                             </div>
                             <div class="col-lg-8">
                                 <div class="testi_text">
@@ -237,7 +237,7 @@
                     <div class="testi_item">
                         <div class="row">
                             <div class="col-lg-4">
-                                <img src="img/testimonials/t1.jpg" alt="">
+                                <img src="${pageContext.request.contextPath}/img/testimonials/t1.jpg" alt="">
                             </div>
                             <div class="col-lg-8">
                                 <div class="testi_text">
@@ -250,7 +250,7 @@
                     <div class="testi_item">
                         <div class="row">
                             <div class="col-lg-4">
-                                <img src="img/testimonials/t2.jpg" alt="">
+                                <img src="${pageContext.request.contextPath}/img/testimonials/t2.jpg" alt="">
                             </div>
                             <div class="col-lg-8">
                                 <div class="testi_text">
@@ -272,21 +272,21 @@
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/stellar.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-    <script src="vendors/isotope/isotope-min.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/mail-script.js"></script>
+    <script src="${pageContext.request.contextPath}/js/jquery-3.2.1.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/popper.js"></script>
+    <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/stellar.js"></script>
+    <script src="${pageContext.request.contextPath}/js/jquery.magnific-popup.min.js"></script>
+    <script src="${pageContext.request.contextPath}/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="${pageContext.request.contextPath}/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="${pageContext.request.contextPath}/vendors/isotope/isotope-min.js"></script>
+    <script src="${pageContext.request.contextPath}/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/jquery.ajaxchimp.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/mail-script.js"></script>
     <!--gmaps Js-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-    <script src="js/gmaps.min.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="${pageContext.request.contextPath}/js/gmaps.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/theme.js"></script>
 
 </body>
 </html>
