@@ -67,7 +67,8 @@
                     </div>
                 </div>
                 <div class="col-lg-9">
-                    <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                    <form id="contactForm" class="row contact_form" method="post"
+                    		action="${pageContext.request.contextPath}/client/save-contact-message" novalidate="novalidate">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
@@ -84,6 +85,11 @@
                                 <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
                             </div>
                         </div>
+                        <c:if test="${not empty result}">
+	                        <div class="col-md-12 text-right">
+	                            <p class="form-group">${result}</p>
+	                        </div>
+                        </c:if>
                         <div class="col-md-12 text-right">
                             <button type="submit" value="submit" class="primary_btn">
                                 <span>Send Message</span>
