@@ -2,6 +2,7 @@ package dev.moneysh.portfolio.service;
 
 import java.time.LocalDateTime;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import dev.moneysh.portfolio.dto.ContactMessageDto;
@@ -15,14 +16,12 @@ public class ContactMessageServiceImpl implements ContactMessageService {
 
 	private final ContactMessageRepository contactMessageRepository;
 
+	private final ModelMapper modelMapper;
+
 	@Override
 	public ContactMessage saveContactMessage(ContactMessageDto contactMessageDto) {
 
-		ContactMessage contactMessage = new ContactMessage();
-		contactMessage.setName(contactMessageDto.getName());
-		contactMessage.setEmail(contactMessageDto.getEmail());
-		contactMessage.setSubject(contactMessageDto.getSubject());
-		contactMessage.setMessage(contactMessageDto.getMessage());
+		ContactMessage contactMessage = modelMapper.map(contactMessageDto, ContactMessage.class);
 		contactMessage.setCreatedAt(LocalDateTime.now());
 
 		return contactMessageRepository.save(contactMessage);
