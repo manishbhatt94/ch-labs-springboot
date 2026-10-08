@@ -37,6 +37,9 @@
                         <a href="${pageContext.request.contextPath}/client/home">Home</a>
                         <a href="${pageContext.request.contextPath}/client/contact">Contact</a>
                     </div>
+                    <c:if test="${not empty result}">
+						<h4>${result}</h4>
+                    </c:if>
                 </div>
             </div>
         </div>
@@ -71,19 +74,67 @@
                     		action="${pageContext.request.contextPath}/client/save-contact-message" novalidate="novalidate">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                            		<%-- Errors for "name" --%>
+					            <c:if test="${not empty errors['name']}">
+					                <div class="alert alert-danger" role="alert">
+					                    <ul class="mb-0 pl-3">
+					                        <c:forEach var="msg" items="${errors['name']}">
+					                            <li><c:out value="${msg}"/></li>
+					                        </c:forEach>
+					                    </ul>
+					                </div>
+					            </c:if>
+                                <input type="text" class="form-control" id="name" name="name"
+                                		placeholder="Enter your name"  value="${contactMessageDto.name}">
                             </div>
+                            <%-- Render errors linked to "name" field here --%>
                             <div class="form-group">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
+                           		<%-- Errors for "email" --%>
+	                            <c:if test="${not empty errors['email']}">
+					                <div class="alert alert-danger" role="alert">
+					                    <ul class="mb-0 pl-3">
+					                        <c:forEach var="msg" items="${errors['email']}">
+					                            <li><c:out value="${msg}"/></li>
+					                        </c:forEach>
+					                    </ul>
+					                </div>
+					            </c:if>
+                                <input type="email" class="form-control" id="email" name="email"
+                                		placeholder="Enter email address" value="${contactMessageDto.email}">
                             </div>
+                            <%-- Render errors linked to "email" field here --%>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
+                            		<%-- Errors for "subject" --%>
+					            <c:if test="${not empty errors['subject']}">
+					                <div class="alert alert-danger" role="alert">
+					                    <ul class="mb-0 pl-3">
+					                        <c:forEach var="msg" items="${errors['subject']}">
+					                            <li><c:out value="${msg}"/></li>
+					                        </c:forEach>
+					                    </ul>
+					                </div>
+					            </c:if>
+                                <input type="text" class="form-control" id="subject" name="subject"
+                                		placeholder="Enter Subject" value="${contactMessageDto.subject}">
                             </div>
+                            <%-- Render errors linked to "subject" field here --%>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
+                            		<%-- Errors for "message" --%>
+					            <c:if test="${not empty errors['message']}">
+					                <div class="alert alert-danger" role="alert">
+					                    <ul class="mb-0 pl-3">
+					                        <c:forEach var="msg" items="${errors['message']}">
+					                            <li><c:out value="${msg}"/></li>
+					                        </c:forEach>
+					                    </ul>
+					                </div>
+					            </c:if>
+                                <textarea class="form-control" name="message" id="message" rows="1"
+                                		placeholder="Enter Message">${contactMessageDto.message}</textarea>
                             </div>
+                            <%-- Render errors linked to "message" field here --%>
                         </div>
                         <c:if test="${not empty result}">
 	                        <div class="col-md-12 text-right">

@@ -1,10 +1,17 @@
 package dev.moneysh.portfolio.controller;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+
+import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -55,8 +62,26 @@ public class ClientController {
 	}
 
 	@PostMapping("/save-contact-message")
-	public String saveContactMessage(@ModelAttribute ContactMessageDto contactMessageDto,
-			RedirectAttributes redirectAttrs) {
+	public String saveContactMessage(@Valid @ModelAttribute ContactMessageDto contactMessageDto,
+			BindingResult bindingResult, Model model, RedirectAttributes redirectAttrs) {
+
+		if (bindingResult.hasErrors()) {
+			// @formatter:off
+		    Map<String, List<String>> errors = bindingResult.getFieldErrors().stream()
+		            .collect(Collectors.groupingBy(
+		                    FieldError::getField,
+		                    LinkedHashMap::new,                                   // preserve field order
+		                    Collectors.mapping(FieldError::getDefaultMessage,
+		                                       Collectors.toList())));
+		    // @formatter:on
+
+			System.out.println("Grouped field errors: " + errors);
+
+			model.addAttribute("errors", errors);
+			model.addAttribute("result", "Contact Form has error(s). Please rectify & re-submit.");
+			return "contact";
+		}
+
 		contactMessageService.saveContactMessage(contactMessageDto);
 		redirectAttrs.addFlashAttribute("result", "Contact message sent successfully.");
 		return "redirect:/client/contact";
